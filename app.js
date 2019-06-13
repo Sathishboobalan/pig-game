@@ -22,9 +22,8 @@ function start(){
     document.querySelector('#score-1').textContent = '0';
     document.querySelector('#current-0').textContent = '0';
     document.querySelector('#current-1').textContent = '0';
-    document.querySelector('.player-'+ 0 +'-panel').classList.add('active');
-    document.querySelector('#name-0').textContent = "PLAYER 1";
-    document.querySelector('#name-1').textContent = "PLAYER 2";
+    document.querySelector('#name-0').textContent = 'PLAYER 1';
+    document.querySelector('#name-1').textContent = 'PLAYER 2';
 }
 
 //to make dice invisible
@@ -56,7 +55,7 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
     //update global value
     score[activePlayer]+=currentScore;
     document.querySelector('#score-' + activePlayer).textContent = score[activePlayer];
-    if(score[activePlayer]>=100){
+    if(score[activePlayer]>=20){
         document.querySelector('#name-'+ activePlayer).textContent = 'Winner!';
         document.querySelector('.dice').style.display = 'none';
         document.querySelector('.player-'+ activePlayer +'-panel').classList.add('winner');
@@ -76,6 +75,9 @@ document.querySelector('.btn-new').addEventListener('click',function(){
     start();
     document.querySelector('.btn-roll').style.display = 'block';
     document.querySelector('.btn-hold').style.display = 'block'; 
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-0-panel').classList.remove('winner');
+     document.querySelector('.player-1-panel').classList.remove('winner');
     
 })
 function nextPlayer(){
