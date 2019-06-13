@@ -8,7 +8,7 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
-alert("Game Rules \n1.Person who is reaching 100 is winner\n2.Losing of chance when getting one\n3.click hold to holding your current score and chance to next person");
+alert("Game Rules \n1.Person who is reaching 100 is winner\n2.Loosing of chance and  your chance to roll dice when getting one\n3.click hold button to holding your current score and chance to next player");
 var score,activePlayer,currentScore;
 
 start();
